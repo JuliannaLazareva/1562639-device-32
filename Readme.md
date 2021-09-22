@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Юлия Лазарева](https://up.htmlacademy.ru/htmlcss/32/user/1562639).
-* Наставник: `Анна Линькова`(https://htmlacademy.ru/profile/id1015999).
+* Наставник: `Анна Линькова`(https://github.com/linkovanne).
 
 ---
 
