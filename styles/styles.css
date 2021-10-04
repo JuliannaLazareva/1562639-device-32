@@ -1,0 +1,68 @@
+.page-header {
+    background-color: #FFE17F;
+}
+
+.category-item {
+    width: 160px;
+    height: 160px;
+}
+.category-item:nth-child(1) {
+    background-image: url("../img/category/virtual-reality.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.category-item:nth-child(2) {
+    background-image: url("../img/category/monopod.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.category-item:nth-child(3) {
+    background-image: url("../img/category/action-camera.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.category-item:nth-child(4) {
+    background-image: url("../img/category/fitness-bracelet.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.category-item:nth-child(5) {
+    background-image: url("../img/category/smart-watch.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.category-item:nth-child(6) {
+    background-image: url("../img/category/quadcopter.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.services {
+    background-color: #F0F0F0;
+}
+.delivery-content {
+    background-color: #F0F0F0;
+}
+.newsletter {
+    background-color: #F0F0F0;;
+}
+.newsletter-text {
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+}
+/*catalog*/
+.catalog-filter {
+    background-color: #ebebeb;
+}
+.filter-label {
+    background-color: #dcdcdc;
+}
+.sorting-wrap {
+    background-color: #ebebeb;
+}
+.pagination {
+    background-color: #ebebeb;
+}
+/*footer*/
+.page-footer {
+    background-color: #444444;
+}
