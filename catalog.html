@@ -12,11 +12,13 @@
       </a>
       <ul  class="navigation-user">
         <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">Поиск по сайту</a>
+          <form class="navigation-user-search navigation-user-link">
+            <input type="text" name="search" class="navigation-search" placeholder="Поиск по сайту">
+          </form>
         </li>
-        <li class="navigation-user-item">
+        <li class="navigation-user-item login">
           <span class="user-name">Коля Петухов</span>
-          <a class="navigation-user-link" href="#">Выйти</a>
+          <a class="navigation-user-link close" href="#">Выйти</a>
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#">Сравнить</a>
@@ -132,14 +134,14 @@
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="Bluetooth" value="yes" checked>
                     <span class="control-mark"></span>
-                <span class="control-label">Есть</span>
+                    <span class="control-label">Есть</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="Bluetooth" value="no">
                     <span class="control-mark"></span>
-                <span class="control-label">Нет</span>
+                    <span class="control-label">Нет</span>
                   </label>
                 </li>
               </ul>
