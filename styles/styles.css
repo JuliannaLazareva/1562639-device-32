@@ -59,6 +59,7 @@ body {
 
 .button {
     display: inline-block;
+    /*box-sizing: border-box;*/
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -69,6 +70,11 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.button:focus {
+    outline-offset: -2px;
+    outline: 2px solid #AF4FFF;
 }
 
 .main-inner {
@@ -90,6 +96,7 @@ body {
     width: 1160px;
     min-height: 300px;
     margin: 40px auto 0;
+    padding-bottom: 31px;
 }
 
 .header-logo {
@@ -110,7 +117,8 @@ body {
 }
 
 .navigation-user-item {
-    margin-bottom: 10px;
+    /*position: relative;*/
+    margin-bottom: 14px;
     margin-right: 15px;
 }
 
@@ -129,15 +137,43 @@ body {
 }
 
 .navigation-user-link {
+    position: relative;
     display: block;
     margin: 0;
-    padding: 15px;
-    padding-left: 0;
+    padding: 10px;
+    padding-left: 44px;
+    padding-right: 20px;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
     text-align: left;
     text-decoration: none;
+}
+
+.navigation-user-link:hover {
+    opacity: 0.6;
+}
+
+.navigation-link:hover::before {
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+    left: 20px;
+    height: 2px;
+    background-color: #000000;
+    content: "";
+}
+
+.navigation-user-link:focus,
+.navigation-search:focus,
+.navigation-link:focus {
+    outline-offset: -2px;
+    outline: 2px solid #AF4FFF;
+    border-radius: 25px;
+}
+
+.navigation-user-search {
+    padding: 0;
 }
 
 .navigation-search {
@@ -149,7 +185,23 @@ body {
     background-color: #FFE17F;
     border: none;
     width: 480px;
+    margin: 0;
     margin-right: 20px;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center left 16px;
+    padding: 10px;
+    padding-left: 52px;
+}
+
+.navigation-icon {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 20px;
+    margin: auto 0;
 }
 
 .navigation-list {
@@ -162,9 +214,9 @@ body {
 }
 
 .navigation-link {
+    position: relative;
     display: block;
-    padding: 15px;
-    padding-left: 0;
+    padding: 15px 20px;
     font-family: "Raleway", sans-serif;
     line-height: 22px;
     color: #000000;
@@ -176,6 +228,25 @@ body {
 .navigation-item {
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+.navigation-item:nth-child(1) .navigation-link {
+    padding-right: 70px;
+}
+
+.navigation-item:nth-child(1) .navigation-link::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/catalog+.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    fill: #000000;
 }
 
 .navigation-item:nth-child(2) {
@@ -194,7 +265,7 @@ body {
 
 .gallery {
     padding-bottom: 70px;
-    margin-top: -120px;
+    margin-top: -100px;
 }
 
 .slider {
@@ -214,7 +285,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 560px;
-    padding-top: 30px;
+    /*padding-top: 15px;*/
 }
 
 .slide-number {
@@ -222,6 +293,7 @@ body {
     font-size: 180px;
     margin: 0;
     margin-right: 50px;
+    padding-bottom: 14px;
     align-self: flex-end;
     color: #ffffff;
 }
@@ -237,16 +309,46 @@ body {
 }
 
 .slide-text {
-    height: 80px;
+    /*height: 80px;*/
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: start;
 }
 
 .button-more {
+    position: relative;
     /*width: 220px;*/
+    padding: 15px;
     margin-bottom: 70px;
     align-self: flex-start;
+    /*Как надпись сделать выше полоски?
+    Как убрать рамку при фокусе?*/
+}
+
+.button-more::before {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    /*bottom: auto;*/
+    left: 0;
+    height: 8px;
+    background-color: #FFE17F;
+    content: "";
+}
+
+.button-more:hover {
+    background-color: #FFE17F;
+}
+
+.button-more:focus::before {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    /*bottom: auto;*/
+    left: 0;
+    height: 8px;
+    background-color: #AF4FFF;
+    content: "";
 }
 
 .parameter {
@@ -266,15 +368,16 @@ body {
 
 .parameter-value {
     width: 160px;
-    height: 52px;
+    /*height: 52px;*/
     margin: 0;
+    margin-bottom: 16px;
     padding: 0;
     font-size: 36px;
 }
 
 .parameter-name {
     margin: 0;
-    margin-top: -11px;
+    /*margin-top: -11px;*/
     padding: 0;
     font-size: 16px;
 }
@@ -350,6 +453,14 @@ body {
     list-style-type: none;
 }
 
+.services-slider .services-slide:nth-child(1) {
+    background-image: url("../img/services/delivery.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 136px 164px;
+    /*разобраться с отступом фона*/
+}
+
 .services-slide {
     margin-left: 120px;
     margin-top: -30px;
@@ -389,12 +500,46 @@ body {
 }
 
 .delivery-button {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
+    padding-right: 33px;
+    /*так или через маргин у иконки?*/
     margin-bottom: 97px;
-    padding: 40px;
     background-color: #F0F0F0;
     color: #000000;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.2em;
+}
+
+.delivery-button:hover .delivery-icon {
+    background-color: #FFC700;
+}
+
+.delivery-button:hover .delivery-icon-info {
+    opacity: 1;
+}
+
+.delivery-button:focus {
+    outline-offset: -5px;
+    outline: 5px solid #AF4FFF;
+}
+
+.delivery-button-text {
+    padding: 0;
+    margin: 0;
+}
+
+.delivery-icon {
+    margin: auto 0;
+    padding: 35px 39px;
+    background-color: #FFE17F;
+}
+
+.delivery-icon-info {
+    opacity: 0.3;
 }
 
 .info-container {
@@ -566,6 +711,8 @@ body {
     align-self: center;
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
+    background-position: center left;
+    /*content: "";*/
 }
 
 
@@ -660,16 +807,46 @@ body {
 }
 
 .footer-social-item {
-    width: 40px;
-    height: 40px;
     margin-right: 15px;
     margin-bottom: 7px;
-    outline: 5px solid red;
-    outline-offset: -5px;
 }
 
 .footer-social-item:nth-child(3n) {
     margin-right: 0;
+}
+
+.footer-social-link {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.footer-social-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /*border-radius: 50%;*/
+    /*background-color: rgba(255, 255, 255, 0.3);*/
+    fill: #444444;
+}
+
+.footer-social-link:hover {
+    background-color: #FFC700;
+}
+
+.footer-social-link:focus {
+    background-color: #444444;
+    outline: 5px solid #AF4FFF;
+}
+
+.footer-social-link:focus .footer-social-icon {
+    fill: #ffffff;
 }
 
 .page-footer a {
@@ -697,10 +874,25 @@ body {
 }
 
 .htmlacademy-link {
-    display: block;
-    height: 34px;
-    outline: 5px solid red;
-    outline-offset: -5px;
+    display: inline-block;
+    /*height: 33px;
+    width: 115px;*/
+    margin: 0;
+    padding: 10px;
+}
+
+.htmlacademy-icon {
+    fill: #FFC702;
+}
+
+.htmlacademy-link:hover .htmlacademy-icon {
+    fill: #ffffff;
+}
+
+.htmlacademy-link:focus .htmlacademy-icon {
+    outline: 2px solid #AF4FFF;
+    outline-offset: -2px;
+    border-radius: 10px;
 }
 
 
@@ -720,8 +912,9 @@ body {
 }
 
 .close {
-    margin-left: auto;
-    margin-right: 26px;
+    padding-left: 10px;
+    /*margin-left: auto;
+    margin-right: 26px;*/
 }
 
 .inner-header {
