@@ -73,8 +73,9 @@ body {
 }
 
 .button:focus {
-    outline-offset: -2px;
-    outline: 2px solid #AF4FFF;
+    /*outline-offset: -2px;
+    outline: 2px solid #AF4FFF;*/
+    outline: none;
 }
 
 .main-inner {
@@ -230,11 +231,12 @@ body {
     margin-bottom: 10px;
 }
 
-.navigation-item:nth-child(1) .navigation-link {
-    padding-right: 70px;
+.navigation-item:nth-child(1) div {
+    position: relative;
+    padding-right: 50px;
 }
 
-.navigation-item:nth-child(1) .navigation-link::after {
+.navigation-item:nth-child(1) div::after {
     content: "";
     position: absolute;
     background-image: url("../img/catalog+.svg");
@@ -318,23 +320,45 @@ body {
 .button-more {
     position: relative;
     /*width: 220px;*/
-    padding: 15px;
+    /*padding: 15px;*/
     margin-bottom: 70px;
     align-self: flex-start;
     /*Как надпись сделать выше полоски?
     Как убрать рамку при фокусе?*/
 }
 
+.button-more span {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+}
+
 .button-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 8px;
+    background-color: #FFE17F;
+    z-index: -1;
+}
+
+
+/*.button-more::before {
     position: absolute;
     top: 22px;
     right: 0;
     /*bottom: auto;*/
-    left: 0;
+
+
+/* left: 0;
     height: 8px;
     background-color: #FFE17F;
     content: "";
-}
+}*/
 
 .button-more:hover {
     background-color: #FFE17F;
@@ -342,13 +366,32 @@ body {
 
 .button-more:focus::before {
     position: absolute;
-    top: 22px;
-    right: 0;
-    /*bottom: auto;*/
+    top: 0;
+    bottom: 0;
     left: 0;
-    height: 8px;
+    right: 0;
+    margin: auto;
     background-color: #AF4FFF;
     content: "";
+    border: none;
+}
+
+.button-more:active {
+    color: #000000;
+    opacity: 0.3;
+}
+
+.button-more:active::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #FFE17F;
+    opacity: 1;
+    content: "";
+    border: none;
 }
 
 .parameter {
@@ -402,15 +445,63 @@ body {
     gap: 40px;
     padding: 0;
     margin: 0;
-    margin-bottom: 69px;
+    margin-bottom: 170px;
     list-style-type: none;
 }
 
-.category-image {
-    margin-bottom: 33px;
+
+/*.category-image-link {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background-color: #FFE17F;
+    margin-bottom: 30px;
+}*/
+
+
+/*.category-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #363636;
+}*/
+
+
+/*.category-link:hover .category-icon {
+    background-color: #FFC700;
+}*/
+
+.category-link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    height: 160px;
+    width: 160px;
+    background-color: #FFE17F;
+    content: "";
+}
+
+.category-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    margin: auto;
+    fill: #363636;
 }
 
 .category-link {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    padding-top: 190px;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -419,16 +510,42 @@ body {
     letter-spacing: -0.02em;
 }
 
+.category-link:focus::before {
+    outline: 5px solid #AF4FFF;
+    outline-offset: -5px;
+}
+
+.category-link:focus {
+    color: #AF4FFF;
+    outline: none;
+}
+
+.category-link:hover::before {
+    background-color: #FFC700;
+}
+
+.category-link:active,
+.category-link:active .category-icon {
+    opacity: 0.3;
+    color: #000000;
+}
+
+.category-link:active::before {
+    outline: none;
+    background-color: #FFC700;
+    opacity: 1;
+}
+
 .services {
     color: #000000;
     background-color: #F0F0F0;
-    padding-bottom: 150px;
 }
 
 .services-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    min-height: 290px;
 }
 
 .services-title {
@@ -451,19 +568,30 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    position: relative;
 }
 
 .services-slider .services-slide:nth-child(1) {
     background-image: url("../img/services/delivery.svg");
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: bottom right;
     background-size: 136px 164px;
-    /*разобраться с отступом фона*/
 }
 
 .services-slide {
+    position: relative;
     margin-left: 120px;
     margin-top: -30px;
+    padding-right: 190px;
+}
+
+.services-slider::before {
+    content: "";
+    position: absolute;
+    top: -98px;
+    bottom: 67px;
+    width: 0;
+    border-left: 7px solid #000000;
 }
 
 .services-pagination {
@@ -882,11 +1010,16 @@ body {
 }
 
 .htmlacademy-icon {
+    padding: 10px;
     fill: #FFC702;
 }
 
 .htmlacademy-link:hover .htmlacademy-icon {
     fill: #ffffff;
+}
+
+.htmlacademy-link:focus {
+    outline: none;
 }
 
 .htmlacademy-link:focus .htmlacademy-icon {
