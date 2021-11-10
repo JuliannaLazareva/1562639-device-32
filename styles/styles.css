@@ -1554,10 +1554,9 @@ body {
 .product-card-image-link:focus {
     outline: 5px solid #AF4FFF;
     outline-offset: -5px;
-    color: #AF4FFF;
 }
 
-.product-card-image-link:focus .product-card-title-link {
+.product-card:focus-within {
     color: #AF4FFF;
 }
 
