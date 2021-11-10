@@ -971,6 +971,12 @@ body {
     /*Почему-то не работает*/
 }
 
+
+/*.field:invalid {
+    border-bottom: 3px solid #FF3D3D;
+    opacity: 1;
+}*/
+
 .newsletter-button span {
     opacity: 1;
 }
@@ -1551,7 +1557,7 @@ body {
     color: #AF4FFF;
 }
 
-.product-card:focus .product-card-price-link {
+.product-card-image-link:focus .product-card-title-link {
     color: #AF4FFF;
 }
 
@@ -1562,7 +1568,7 @@ body {
     margin: 0;
 }
 
-.product-card-price-link {
+.product-card-price {
     justify-self: end;
     font-weight: inherit;
     font-size: 18px;
