@@ -78,7 +78,6 @@
                     </li>
                 </ul>
             </section>
-
             <section class="catalog-products">
                 <h2 class="visually-hidden">Список товаров с фильтрами</h2>
                 <div class="catalog-filter-container">
@@ -86,20 +85,33 @@
                         <h2 class="filter-label">Фильтр:</h2>
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-title">Стоимость</legend>
-                            <button class="range-toggle toggle-min" type="button">
-                                <span class="visually-hidden">Изменить минимальную цену.</span>
-                            </button>
-                            <button class="range-toggle toggle-max" type="button">
-                                <span class="visually-hidden">Изменить максимальную цену.</span>
-                            </button>
+                            <div class="range">
+                                <div class="range-scale">
+                                    <div class="range-bar" style="left: 0; width: 119px">
+                                        <button class="range-toggle toggle-min" type="button">
+                                            <label class="catalog-filter-label">
+                                                от <input class="range-input" type="number" name="min-price" value="0" tabindex="-1">
+                                            </label>
+                                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                                        </button>
+                                        <button class="range-toggle toggle-max" type="button">
+                                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                                            <label class="catalog-filter-label">
+                                                до <input class="range-input" type="number" name="max-price" value="5000" tabindex="-1">
+                                            </label>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--<div class="range-wrapper-inputs">
+                                    <label class="catalog-filter-label">
+                                        от <input class="range-input" type="number" name="min-price" value="0">
+                                    </label>
 
-                            <label class="catalog-filter-label">
-                                от <input class="catalog-filter-input" type="number" name="min-price">
-                            </label>
-
-                            <label class="catalog-filter-label">
-                                до <input class="catalog-filter-input" type="number" name="max-price">
-                            </label>
+                                    <label class="catalog-filter-label">
+                                        до <input class="range-input" type="number" name="max-price" value="5000">
+                                    </label>
+                                </div>-->
+                            </div>
                         </fieldset>
 
                         <fieldset class="catalog-filter-group">
@@ -163,7 +175,9 @@
                             </ul>
                         </fieldset>
 
-                        <button class="button" type="submit">Показать</button>
+                        <button class="button filter-button stripe-button" type="submit">
+                            <span>Показать</span>
+                        </button>
                     </form>
                 </div>
                 <div class="catalog-right-column">
@@ -194,7 +208,7 @@
                         <ul class="product-list">
                             <li class="product-card">
                                 <a class="product-card-image-link" href="product.html"></a>
-                                <a class="product-card-title-link" tabindex="1">
+                                <a class="product-card-title-link">
                                     <h3 class="product-card-title">Любительская селфи-палка</h3>
                                 </a>
                                 <span class="product-card-price">500 ₽</span>
