@@ -1922,8 +1922,14 @@ body {
     background-color: #000000;
     box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
     color: #ffffff;
-    top: 310px;
-    right: -40px;
+    top: 40px;
+    right: -20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 19px;
 }
 
 .tooltip::before {
@@ -1937,6 +1943,17 @@ body {
     transform: rotate(45deg);
 }
 
+
+/*.tooltip {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: #000000;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    top: 310px;
+    right: -40px;
+}
 .tooltip-text {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
@@ -1944,7 +1961,7 @@ body {
     line-height: 20px;
     margin: 0;
     padding: 19px;
-}
+}*/
 
 
 /*catalog*/
