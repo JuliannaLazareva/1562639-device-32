@@ -339,7 +339,7 @@
                                     <path d="M82.82 4.01H3.33A3.19 3.19 0 0 0 .14 7.2v46.4a3.19 3.19 0 0 0 3.19 3.2h79.5A3.19 3.19 0 0 0 86 53.6V7.2A3.19 3.19 0 0 0 82.82 4ZM8.4 37.24h-.22a3.19 3.19 0 0 1-3.2-3.2v-7.28a3.19 3.19 0 0 1 3.2-3.18h.22v13.66ZM69.62 52.4H13.34v-44h56.28v44Zm8.78-17.86a4.15 4.15 0 1 1 0-8.29 4.15 4.15 0 0 1 0 8.3ZM54.65 0H31.5v2.76h23.15V0ZM46.6 64.86V61.9h8.05v-2.76H31.5v2.76h8.04v35.24a6.07 6.07 0 0 0-3.63 5.56V117h14.33v-14.3c0-2.5-1.5-4.63-3.63-5.56v-28h4.8l5.04 1.22v-6.71l-5.05 1.21h-4.8Z"/>
                                 </svg>
                             </div>
-                            <span>Моноподы для селфи</span>
+                            <span>Моноподы<br> для селфи</span>
                         </a>
                     </li>
                     <li class="category-item">
@@ -393,7 +393,7 @@
                     <li class="services-slide">
                         <h3 class="services-title">Доставка</h3>
                         <p class="services-content">
-                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                            Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! Ведь<br> мы неплохо заработаем, поднимая его на ваш этаж.
                         </p>
                     </li>
                     <li class="services-slide visually-hidden">
@@ -474,14 +474,14 @@
                     <section class="contacts index-columns">
                         <h3 class="contacts-title">Контакты</h3>
                         <p class="contacts-content">
-                            Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.
+                            Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.
                         </p>
                         <h4 class="contacts-subtitles">Интернет-магазин «Девайс»</h4>
-                        <address class="contacts-adress">
-                            <p class="contacts-adress-text">
-                                Санкт-Петербург, набережная реки Карповки, 5, литера П.
-                            </p>
-                            <a class="contacts-phone" href="tel:+78128121212" tabindex="-1">+7 (812) 812-12-12</a>
+                        <address class="contacts-address">
+                        <p class="contacts-address-text">
+                            Санкт-Петербург, набережная реки Карповки, 5, литера П.
+                        </p>
+                        <a class="contacts-phone" href="tel:+78128121212" tabindex="-1">+7 (812) 812-12-12</a>
                         </address>
                         <h4 class="contacts-subtitles">Время работы</h4>
                         <ul class="contacts-schedule">
@@ -497,9 +497,9 @@
         </section>
         <section class="newsletter">
             <div class="newsletter-info page-container">
-                <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+                <h2 class="newsletter-title">Подпишитесь<br> на рассылку</h2>
                 <p class="newsletter-content">
-                    Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
+                    Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
                 </p>
             </div>
             <div class="newsletter-form-wrap page-container">
@@ -523,8 +523,8 @@
                 <a class="footer-contacts-logo" href="index.html" tabindex="-1">
                     <img class="footer-logo" src="img/footer-logo.svg" width="145" height="36" alt="Логотип магазина гаджетов Девайс">
                 </a>
-                <address class="footer-adress">
-                    <p class="footer-adress-content">
+                <address class="footer-address">
+                    <p class="footer-address-content">
                         Санкт-Петербург, набережная реки Карповки, 5, литера П.
                     </p>
                 </address>
@@ -590,6 +590,8 @@
             </div>
         </div>
     </footer>
+    <!--modal-container-close
+    Класс для закрытия модального окна-->
     <div class="modal-container modal-container-close">
         <div class="modal modal-delivery">
             <button class="modal-close-button">
@@ -613,11 +615,15 @@
                         <input class="delivery-form-field" type="text" id="delivery-object" name="delivery-object" placeholder="В свободной форме">
                     </p>
                     <p class="field-group delivery-form-number">
-                        <label class="delivery-form-label delivery-form-label-number" for="delivery-number">Количество:</label>
+                        <label class="delivery-form-label delivery-form-label-number" for="delivery-number">
+                            Количество:
+                        <a class="tooltip-ico"></a>
+                        <span class="tooltip-message">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                    </label>
                         <button class="number-minus" type="button"></button>
                         <input class="delivery-form-field" type="number" min="1" step="1" id="delivery-number" name="delivery-number" value="1" readonly>
                         <button class="number-plus" type="button"></button>
-                        <span class="tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                        <span class="tooltip-message">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
                     </p>
                     <button class="button delivery-form-button stripe-button" type="submit">
                         <span>Показать</span>
