@@ -2514,8 +2514,18 @@ img {
   color: #af4fff;
 }
 
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/check.svg");
+  content: "";
+}
+
 .control-input[type="checkbox"]:checked:focus + .control-mark::after {
-  border-color: #af4fff;
+  background-image: url("../img/violet-check.svg");
 }
 
 .control-mark:hover {
@@ -2524,19 +2534,6 @@ img {
 
 .control-mark:disabled + .control-mark {
   opacity: 1;
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 8px;
-  height: 5px;
-  border-left: 4px solid #000000;
-  border-bottom: 4px solid #000000;
-  border-radius: 1px;
-  transform: rotate(-45deg);
-  content: "";
 }
 
 
