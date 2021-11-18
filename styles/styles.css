@@ -205,24 +205,32 @@ img {
   max-width: 250px;
 }
 
-.navigation-user-item:nth-child(3) {
-  margin-right: 7px;
-  margin-left: auto;
+.login {
+  margin-left: 28px;
 }
 
-.login {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 31px;
+.login .navigation-user-link {
+  padding-left: 46px;
+}
+
+.login .navigation-user-link::before {
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  left: 21px;
+  width: 13px;
+  height: 12px;
+  margin: auto 0;
+  background-image: url("../img/login.svg");
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .navigation-user-link {
-  position: relative;
   display: block;
   margin: 0;
   padding: 10px;
   padding-right: 20px;
-  padding-left: 44px;
   font-size: 16px;
   line-height: 19px;
   text-align: left;
@@ -230,17 +238,26 @@ img {
   text-decoration: none;
 }
 
-.navigation-icon {
-  position: absolute;
-  top: -2px;
-  right: auto;
-  bottom: 0;
-  left: 20px;
-  margin: auto 0;
+.compare {
+  margin-right: 10px;
+  margin-left: auto;
 }
 
-.navigation-user-item:nth-child(3) .navigation-user-link {
-  padding-left: 39px;
+.compare .navigation-user-link {
+  padding-left: 41px;
+}
+
+.compare .navigation-user-link::before {
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  left: 21px;
+  width: 10px;
+  height: 12px;
+  margin: auto 0;
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .cart {
@@ -270,10 +287,24 @@ img {
   content: "2";
 }
 
+.cart .navigation-user-link {
+  padding-left: 40px;
+}
 
-/*класс для открытия поповера*/
+.cart .navigation-user-link::before {
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  left: 15px;
+  width: 16px;
+  height: 14px;
+  margin: auto 0;
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
 
-.popover-open.popover-cart {
+.popover-cart:hover .popover-cart-content {
   display: block;
 }
 
@@ -281,8 +312,23 @@ img {
 /*busket popover*/
 
 .popover-cart {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-cart-content::before {
   position: absolute;
-  top: 50px;
+  top: -5px;
+  right: 160px;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.popover-cart-content {
+  position: absolute;
   right: -70px;
   z-index: 1;
   display: none;
@@ -295,21 +341,6 @@ img {
   color: #ffffff;
   background: #000000;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.popover-cart::before {
-  position: absolute;
-  top: -5px;
-  right: 160px;
-  width: 10px;
-  height: 10px;
-  background-color: #000000;
-  transform: rotate(45deg);
-  content: "";
-}
-
-.popover-cart-content {
-  width: 100%;
 }
 
 .cart-items-list {
@@ -557,6 +588,11 @@ img {
 
 /*Catalog*/
 
+.navigation-catalog-wpap {
+  position: relative;
+  display: inline-block;
+}
+
 .navigation-catalog {
   position: relative;
   margin-left: 43px;
@@ -564,14 +600,14 @@ img {
 
 .navigation-catalog::after {
   position: absolute;
-  top: 50%;
-  right: -48px;
+  top: 48%;
+  right: -53px;
   width: 50px;
   height: 50px;
   background: url("../img/nav-catalog/plus.svg") center no-repeat;
   border: 1px solid #000000;
   border-radius: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-52%);
   opacity: 0.2;
   content: "";
 }
@@ -591,7 +627,7 @@ img {
 }
 
 .navigation-item:focus-within .subcatalog-list,
-.navigation-catalog:hover + .subcatalog-list {
+.navigation-catalog-wrap:hover .subcatalog-list {
   display: flex;
 }
 
@@ -841,10 +877,9 @@ img {
   align-self: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-right: 60px;
   padding: 0;
   list-style-type: none;
-  transform: translate(10px, -5px);
+  transform: translate(10px, -7px);
 }
 
 .slider-pagination-item {
@@ -898,51 +933,60 @@ img {
   list-style-type: none;
 }
 
-.category-icon::before {
-  position: absolute;
+.category-item {
+position: relative;
+}
+
+.category-link::before {
+position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 160px;
   height: 160px;
-  fill: #363636;
   background-color: #ffe17f;
   content: "";
 }
 
-.category-icon svg {
-  position: absolute;
+.category-link::after {
+position: absolute;
+  top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  margin: 0 auto;
-  fill: #363636;
+  background-repeat: no-repeat;
+  content: "";
 }
 
-.category-item:nth-child(1) svg {
-  top: 53px;
+.category-item:nth-child(1) .category-link::after {
+  background-image: url("../img/category/virtual-reality.svg");
+  background-position: top 53px left 31px;
 }
 
-.category-item:nth-child(2) svg {
-  top: 43px;
+.category-item:nth-child(2) .category-link::after {
+  background-image: url("../img/category/monopod.svg");
+  background-position: top 43px left 36px;
 }
 
-.category-item:nth-child(3) svg {
-  top: 38px;
-  right: 40px;
-  left: 49px;
+.category-item:nth-child(3) .category-link::after {
+  background-image: url("../img/category/action-camera.svg");
+  background-position: top 37px left 47px;
 }
 
-.category-item:nth-child(4) svg {
-  top: 50px;
+.category-item:nth-child(4) .category-link::after {
+  background-image: url("../img/category/fitness-bracelet.svg");
+  background-position: top 50px left 25px;
 }
 
-.category-item:nth-child(5) svg {
-  top: 31px;
+.category-item:nth-child(5) .category-link::after {
+  background-image: url("../img/category/smart-watch.svg");
+  background-position: top 31px left 52px;
 }
 
-.category-item:nth-child(6) svg {
-  top: 49px;
+.category-item:nth-child(6) .category-link::after {
+  background-image: url("../img/category/quadcopter.svg");
+  background-position: top 49px left 14px;
 }
 
 .category-link {
@@ -959,7 +1003,7 @@ img {
   text-decoration: none;
 }
 
-.category-link:focus div::before {
+.category-link:focus::before {
   outline: 5px solid #af4fff;
   outline-offset: -5px;
 }
@@ -969,7 +1013,7 @@ img {
   outline: none;
 }
 
-.category-link:hover div::before {
+.category-link:hover::before {
   background-color: #ffc700;
 }
 
@@ -978,12 +1022,12 @@ img {
   opacity: 0.3;
 }
 
-.category-link:active div::before {
+.category-link:active::before {
   outline: none;
 }
 
-.category-link:active svg {
-  fill-opacity: 0.3;
+.category-link:active::after {
+  opacity: 0.3;
 }
 
 
