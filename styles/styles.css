@@ -934,11 +934,11 @@ img {
 }
 
 .category-item {
-position: relative;
+  position: relative;
 }
 
 .category-link::before {
-position: absolute;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -950,7 +950,7 @@ position: absolute;
 }
 
 .category-link::after {
-position: absolute;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -2114,7 +2114,7 @@ position: absolute;
 .user-name {
   align-self: center;
   margin: 0;
-  padding-left: 44px;
+  padding-right: 24px;
   font-size: 16px;
   line-height: 19px;
 }
