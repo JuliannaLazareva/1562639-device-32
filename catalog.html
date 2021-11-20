@@ -236,62 +236,47 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="button filter-button stripe-button" type="submit">
-                <span>Показать</span>
-              </button>
+              <button class="button filter-button stripe-button" type="submit">Показать</button>
             </form>
           </div>
           <div class="catalog-right-column">
             <div class="sorting-container">
-              <form class="sorting-type" action="https://echo.htmlacademy.ru">
-                <h3 class="sorting-label">Сортировка:</h3>
-                <select class="select-control" name="sorting">
-                  <option value="popular">Сначала популярные</option>
-                  <option value="cheap">Сначала дешёвые</option>
-                  <option value="expensive">Сначала дорогие</option>
-                </select>
-                <button class="visually-hidden" type="submit" tabindex="-1">Отсортировать продукты</button>
-              </form>
-              <a href="#" class="sorting-toggle sorting-toggle-current">
-                <svg aria-hidden="true" focusable="false" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 0 11 10H0" />
-                </svg>
+              <h3 class="sorting-label">Сортировка:</h3>
+              <a class="sorting-popular" href="#">Сначала популярные</a>
+              <a href="#" class="sorting-toggle sort-up sorting-toggle-current">
                 <span class="visually-hidden">Сортировка вверх</span>
               </a>
-              <a href="#" class="sorting-toggle">
-                <svg aria-hidden="true" focusable="false" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 10 0 0h11" />
-                </svg>
+              <a href="#" class="sorting-toggle sort-down">
                 <span class="visually-hidden">Сортировка вниз</span>
               </a>
             </div>
             <div class="product-container">
               <ul class="product-list">
                 <li class="product-card">
-                  <a class="product-card-image-link" href="product.html"></a>
-                  <a class="button product-card-button stripe-button" tabindex="-1">
-                    <span>Подробнее</span>
+                  <a class="product-card-image-link" href="product.html">
+                    <img class="product-card-image" src="img/catalog/product-1.jpg" width="360" height="380" alt="">
                   </a>
+                  <a class="button product-card-button stripe-button" tabindex="-1">Подробнее</a>
                   <a class="product-card-title-link">
                     <h4 class="product-card-title">Любительская селфи-палка</h4>
                   </a>
                   <span class="product-card-price">500 ₽</span>
                 </li>
                 <li class="product-card">
-                  <a class="product-card-image-link" href="product.html"></a>
-                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">
-                    <span>Подробнее</span>
+                  <a class="product-card-image-link" href="product.html">
+                    <img class="product-card-image" src="img/catalog/product-2.jpg" width="360" height="380" alt="">
                   </a>
+                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">Подробнее</a>
                   <a class="product-card-title-link">
                     <h4 class="product-card-title">Профессиональная<br> селфи-палка</h4>
                   </a>
                   <span class="product-card-price">1 500 ₽</span>
                 </li>
                 <li class="product-card">
-                  <a class="product-card-image-link" href="product.html"></a>
-                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">
-                    <span>Подробнее</span>
+                  <a class="product-card-image-link" href="product.html">
+                    <img class="product-card-image" src="img/catalog/product-3.jpg" width="360" height="380" alt="">
                   </a>
+                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">Подробнее</a>
                   <a class="product-card-title-link">
                     <h4 class="product-card-title">Непотопляемая<br> селфи-палка</h4>
                   </a>
@@ -299,10 +284,10 @@
                 </li>
                 <!--new - класс для добавления метки NEW*-->
                 <li class="product-card new">
-                  <a class="product-card-image-link" href="product.html"></a>
-                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">
-                    <span>Подробнее</span>
+                  <a class="product-card-image-link" href="product.html">
+                    <img class="product-card-image" src="img/catalog/product-4.jpg" width="360" height="380" alt="">
                   </a>
+                  <a class="product-card-button button stripe-button" href="#" tabindex="-1">Подробнее</a>
                   <a class="product-card-title-link">
                     <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
                   </a>
@@ -364,9 +349,7 @@
         <a class="footer-contacts-logo" href="index.html" tabindex="-1">
           <img class="footer-logo" src="img/footer-logo.svg" width="145" height="36" alt="Логотип магазина гаджетов Девайс.">
         </a>
-        <address class="footer-address">
-          <p class="footer-address-content">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        </address>
+        <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
       </div>
       <div class="footer-nav-social-container">
         <div class="footer-nav">
