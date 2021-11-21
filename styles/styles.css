@@ -170,7 +170,7 @@ img {
 
 .navigation-user-item {
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .navigation-search {
@@ -282,6 +282,7 @@ img {
 
 .cart .navigation-user-link {
   padding-left: 40px;
+  padding-bottom: 15px;
 }
 
 .cart .navigation-user-link::before {
@@ -2263,44 +2264,50 @@ img {
 /*Sorting toggle*/
 
 .sorting-toggle {
-  width: 11px;
-  height: 10px;
-  margin: 0;
-  padding: 10px;
+  position: relative;
+  width: 31px;
+  height: 30px;
 }
 
 .sort-up {
   position: absolute;
   top: 0;
-  right: 32px;
-  bottom: 0;
+  right: 12px;
+  bottom: 2px;
   left: auto;
+  width: 11px;
+  height: 10px;
   margin: auto;
   background-image: url("../img/sort.svg");
   background-repeat: no-repeat;
-  background-position: center right 10px;
   transform: rotate(180deg);
 }
 
 .sort-down {
   position: absolute;
   top: 0;
-  right: 2px;
-  bottom: 0;
+  right: 12px;
+  bottom: 2px;
   left: auto;
+  width: 11px;
+  height: 10px;
   margin: auto;
   background-image: url("../img/sort.svg");
   background-repeat: no-repeat;
-  background-position: center right 10px;
 }
 
 .sorting-toggle-current {
   opacity: 0.2;
 }
 
-.sorting-toggle:focus {
+.sorting-toggle:focus-within {
   outline: 5px solid #af4fff;
   outline-offset: -5px;
+}
+
+.sort-up:focus,
+.sort-down:focus {
+  outline: none;
 }
 
 .sorting-toggle:hover {
@@ -2565,8 +2572,14 @@ img {
   background-image: url("../img/violet-check.svg");
 }
 
-.control-mark:hover {
+.control-input:checked:hover + .control-mark,
+.control-input:checked:hover ~ .control-label {
   opacity: 0.5;
+}
+
+.control-input:active + .control-mark,
+.control-input:active ~ .control-label {
+  opacity: 0.2;
 }
 
 .control-mark:disabled + .control-mark {
