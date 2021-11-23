@@ -658,6 +658,7 @@ img {
   width: 1104px;
   min-height: 151px;
   margin: 0;
+  margin-top: -1px;
   margin-left: -43px;
   padding: 29px 13px 0 43px;
   list-style-type: none;
@@ -2707,7 +2708,8 @@ img {
   max-width: 100%;
 }
 
-.product-card-image-link:hover .product-card-image {
+.product-card-image-link:hover .product-card-image,
+.product-card:hover .product-card-image {
   opacity: 0.6;
 }
 
